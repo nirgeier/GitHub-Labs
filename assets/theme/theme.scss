@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
+.logo {
+    width: 100px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-image: url('https://raw.githubusercontent.com/nirgeier/labs-assets/main/assets/images/Wizard.jpeg');
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
 /* Remove focus-within styles globally */
 *:focus-within {
   outline: none !important;
