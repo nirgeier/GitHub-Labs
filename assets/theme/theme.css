@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
+/* Remove focus-within styles globally */
+*:focus-within {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.md-typeset ol li,
+.md-typeset ul li {
+  margin: 0;
+}
+
+/* Change border color, width, and style for all notes */
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border: 1px solid #0074d9; /* Change color and style as needed */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: none; /* Optional: remove shadow */
+}
+
+@media (prefers-color-scheme: dark) {
+  .md-typeset .admonition.note,
+  .md-typeset details.note {
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Change color and style as needed */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 0 1px whitesmoke;
+  }
+  .md-typeset .note > .admonition-title:before,
+  .md-typeset .note > summary:before {
+    content: "";
+  }
+}
+.md-typeset h1 {
+  font-size: 2em;
+  line-height: 1.5;
+  margin: 0px 0px 0em;
+}
+
+.md-typeset h2 {
+  font-size: 1.5em;
+  line-height: 1.5;
+  margin: 0px 0px 0em;
+}
+
+.md-nav,
+.md-typeset {
+  font-size: 14px;
+}
+
+.md-typeset table {
+  line-height: 0.25rem;
+}/*# sourceMappingURL=theme.css.map */
