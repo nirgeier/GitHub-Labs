@@ -1,0 +1,102 @@
+:root {
+    --color-red: #993232;
+    --color-headers: #00ccc0;
+    --color-dark-bg: #333;
+    --color-text: #3a3a3a;
+    --color-dark-text: #303030;
+    --color-background: #fafafa;
+    --color-table-header-background: #ededed;
+    --color-code-background: #fff;
+    --color-code-border-color: #dfdfdf;
+    --color-invert-filter: none;
+}
+
+body {
+    font-family: "Mulish", sans-serif;
+}
+
+[data-md-type="navigation"] {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.logo1 {
+    width: 182px;
+    height: 50px;
+    margin: 20px auto;
+    display: block;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    //background-image: url("https://raw.githubusercontent.com/nirgeier/labs-assets/main/assets/images/Wizard.jpeg");
+    background-image: url("https://raw.githubusercontent.com/nirgeier/labs-assets/main/assets/images/codeWizard.png");
+    background-size: cover;
+    background-position: center;
+    // border-radius: 10px;
+    // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    // z-index: 1000;
+}
+
+.logo2 {
+    width: 100px;
+    height: 75px;
+    margin: auto 20px;
+    display: block;
+    position: fixed;
+    left: 0px;
+    bottom: 20px;
+    background-image: url("https://raw.githubusercontent.com/nirgeier/labs-assets/main/assets/images/git-github.png");
+    background-size: cover;
+    background-position: center;
+    // border-radius: 10px;
+    // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    // z-index: 1000;
+}
+
+/* Remove focus-within styles globally */
+*:focus-within {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.md-typeset ol li,
+.md-typeset ul li {
+    margin: 0;
+}
+
+/* Change border color, width, and style for all notes */
+.md-typeset .admonition.note,
+.md-typeset details.note {
+    border: 1px solid #0074d9; /* Change color and style as needed */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: none; /* Optional: remove shadow */
+}
+
+.md-theme-light body {
+    color: red;
+}
+.md-theme-light .md-typeset img,
+.md-theme-light .md-typeset svg,
+.md-theme-light .md-typeset video {
+    border-radius: 10px;
+}
+
+.md-typeset h1 {
+    font-size: 2em;
+    line-height: 1.5;
+    margin: 0px 0px 0em;
+}
+
+.md-typeset h2 {
+    font-size: 1.5em;
+    line-height: 1.5;
+    margin: 0px 0px 0em;
+}
+
+.md-nav,
+.md-typeset {
+    font-size: 16px;
+}
+
+.md-typeset table {
+    line-height: 0.25rem;
+}

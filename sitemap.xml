@@ -2,42 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nirgeier.github.io/GitHub-Labs/</loc>
-         <lastmod>2025-08-10</lastmod>
+         <lastmod>2025-08-11</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/GitHub-Labs/000-Setup/</loc>
+         <lastmod>2025-08-11</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/GitHub-Labs/000-Setup/01-Install-Tools/</loc>
-         <lastmod>2025-08-10</lastmod>
+         <lastmod>2025-08-11</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/GitHub-Labs/000-Setup/02-Setup-GitHub/</loc>
-         <lastmod>2025-08-10</lastmod>
+         <lastmod>2025-08-11</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/GitHub-Labs/001-Working-With-Repo/01a-Creating-Repo-MCP/</loc>
-         <lastmod>2025-08-10</lastmod>
+         <lastmod>2025-08-11</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/GitHub-Labs/001-Working-With-Repo/01b-Creating-Repo-Web/</loc>
-         <lastmod>2025-08-10</lastmod>
+         <lastmod>2025-08-11</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/GitHub-Labs/001-Working-With-Repo/01c-Creating-Repo-gh/</loc>
-         <lastmod>2025-08-10</lastmod>
+         <lastmod>2025-08-11</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/GitHub-Labs/001-Working-With-Repo/02-Cloning-Repo/</loc>
-         <lastmod>2025-08-10</lastmod>
+         <lastmod>2025-08-11</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/GitHub-Labs/001-Working-With-Repo/03-Making-Changes/</loc>
-         <lastmod>2025-08-10</lastmod>
+         <lastmod>2025-08-11</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/GitHub-Labs/001-Working-With-Repo/04-Committing-Changes/</loc>
-         <lastmod>2025-08-10</lastmod>
+         <lastmod>2025-08-11</lastmod>
     </url>
     <url>
          <loc>https://nirgeier.github.io/GitHub-Labs/001-Working-With-Repo/05-Pushing-Changes/</loc>
-         <lastmod>2025-08-10</lastmod>
+         <lastmod>2025-08-11</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/GitHub-Labs/002-Working-With-PR/</loc>
+         <lastmod>2025-08-11</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/GitHub-Labs/002-Working-With-PR/01-Creating-Local-Branch/</loc>
+         <lastmod>2025-08-11</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/GitHub-Labs/002-Working-With-PR/02-Opening-Pull-Requests/</loc>
+         <lastmod>2025-08-11</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/GitHub-Labs/002-Working-With-PR/02a-Opening-PR-GitHub-Web/</loc>
+         <lastmod>2025-08-11</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/GitHub-Labs/002-Working-With-PR/02b-Opening-PR-GitHub-CLI/</loc>
+         <lastmod>2025-08-11</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/GitHub-Labs/002-Working-With-PR/02c-Opening-PR-GitHub-MCP/</loc>
+         <lastmod>2025-08-11</lastmod>
+    </url>
+    <url>
+         <loc>https://nirgeier.github.io/GitHub-Labs/002-Working-With-PR/03-Working-With-PR-Reviews/</loc>
+         <lastmod>2025-08-11</lastmod>
     </url>
 </urlset>
