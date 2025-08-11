@@ -27,7 +27,7 @@ body {
   margin: 20px auto;
   display: block;
   position: fixed;
-  right: 0px;
+  right: 10px;
   bottom: 0px;
   background-image: url("https://raw.githubusercontent.com/nirgeier/labs-assets/main/assets/images/codeWizard.png");
   background-size: cover;
@@ -40,11 +40,12 @@ body {
   margin: auto 20px;
   display: block;
   position: fixed;
-  left: 0px;
-  bottom: 20px;
+  right: 30px;
+  bottom: 100px;
   background-image: url("https://raw.githubusercontent.com/nirgeier/labs-assets/main/assets/images/git-github.png");
   background-size: cover;
   background-position: center;
+  border-radius: 15px;
 }
 
 /* Remove focus-within styles globally */
