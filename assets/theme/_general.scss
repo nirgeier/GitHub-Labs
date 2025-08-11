@@ -100,3 +100,19 @@ body {
 .md-typeset table {
     line-height: 0.25rem;
 }
+
+/* Force sidebar to be visible alongside tabs */
+.md-sidebar {
+    display: block !important;
+}
+
+/* Make sure content area doesn't overlap */
+.md-main__inner {
+    display: grid;
+    grid-template-columns: minmax(250px, 300px) 1fr;
+}
+
+/* Hide sidebar items that are not in the active tab */
+.md-nav__list > .md-nav__item--nested:not(.md-nav__item--active) {
+    display: none;
+}

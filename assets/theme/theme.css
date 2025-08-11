@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 :root {
   --color-red: #993232;
   --color-headers: #00ccc0;
@@ -96,6 +95,22 @@ body {
 
 .md-typeset table {
   line-height: 0.25rem;
+}
+
+/* Force sidebar to be visible alongside tabs */
+.md-sidebar {
+  display: block !important;
+}
+
+/* Make sure content area doesn't overlap */
+.md-main__inner {
+  display: grid;
+  grid-template-columns: minmax(250px, 300px) 1fr;
+}
+
+/* Hide sidebar items that are not in the active tab */
+.md-nav__list > .md-nav__item--nested:not(.md-nav__item--active) {
+  display: none;
 }
 
 [data-md-color-media="(prefers-color-scheme: dark)"] {
