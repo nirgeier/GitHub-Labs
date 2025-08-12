@@ -1,0 +1,191 @@
+###
+### mkdocs-site.yml
+###
+site_name: GitHub-Labs
+site_url: https://nirgeier.github.io/GitHub-Labs/
+repo_url: https://github.com/nirgeier/GitHub-Labs
+repo_name: nirgeier/GitHub-Labs
+site_description: A collection of GitHub Labs for learning and practicing GitHub skills.
+site_author: Nir Geier
+docs_dir: Labs
+site_dir: /tmp/mkdocs-site
+edit_uri: ""
+###
+### mkdocs-theme.yml
+###
+theme:
+  name: material
+  custom_dir: overrides
+  footer:
+    copyright: "©2025 Nir Geier"
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.footnote.tooltips
+    - content.tabs.link
+    - content.tooltips
+    - navigation.expand: true
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top: true
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate
+    #- header.autohide  # Disabled to keep top nav always visible
+    - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to system preference
+  font:
+    text: Mulish
+    code: JetBrains Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+    repo: fontawesome/brands/github
+    admonition:
+      note: material/lightbulb
+###
+### mkdocs-extra.yml
+###
+
+extra:
+  assets:
+    - ./assets/images/
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/nirgeier/GitHub-Labs
+      name: View on GitHub
+    - icon: octicons/star-16
+      link: https://github.com/nirgeier/GitHub-Labs/stargazers
+      name: Star this repo
+    - icon: octicons/repo-forked-16
+      link: https://github.com/nirgeier/GitHub-Labs/network/members
+      name: Fork this repo
+
+extra_css:
+  - ./assets/stylesheets/theme.css
+extra_javascript:
+  - https://buttons.github.io/buttons.js
+###
+### mkdocs-plugins.yml
+###
+
+plugins:
+    - awesome-pages
+    - section-index
+    - meta
+    - git-authors
+
+    # - pdf-export:
+    #     combined: true # all pages in one PDF
+    #     combined_output_path: docs/Full-Documentation.pdf
+
+    # - git-committers:
+    #     repository: nirgeier/GitHub-Labs
+    #     branch: gh-pages
+    - git-revision-date-localized:
+          enable_creation_date: true
+          enable_git_follow: false
+          fallback_to_build_date: true
+          locale: en
+          timezone: UTC
+          type: date
+    - search:
+          separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+    - minify:
+          minify_html: true
+###
+### mkdocs-extensions.yml
+###
+
+markdown_extensions:
+  - toc:
+      permalink: false
+      baselevel: 1
+      toc_depth: 5
+  - abbr
+  - tables
+  - admonition # For callouts/notes
+  - footnotes # Footnotes support
+  - attr_list # Attribute lists for elements
+  - def_list # Definition lists
+  - md_in_html # Markdown inside HTML blocks
+  - smarty # Smart punctuation
+  - meta
+  - codehilite:
+      guess_lang: true # Fallback code highlighting
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details # Collapsible details
+  - pymdownx.inlinehilite # Inline code highlighting
+  - pymdownx.keys # Keyboard key formatting
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.tilde # Subscript/superscript
+  - pymdownx.snippets # Snippet includes
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: "!!python/name:pymdownx.superfences.fence_code_format"
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+###
+### mkdocs-nav.yml
+###
+
+nav:
+  - Home: README.md
+  - Setup:
+      - 00-Setup/README.md
+      - "Install Tools": 00-Setup/01-Install-Tools.md
+      - "Setup GitHub": 00-Setup/02-Setup-GitHub.md
+  - Repositories:
+      - 01-Working-With-Repo/README.md
+      - "1a. Creating a Repository (WEB)": 01-Working-With-Repo/01a-Creating-Repo-Web.md
+      - "1b. Creating a Repository (MCP)": 01-Working-With-Repo/01b-Creating-Repo-MCP.md
+      - "1c. Creating a Repository (gh)": 01-Working-With-Repo/01c-Creating-Repo-gh.md
+      - "2. Cloning a Repository": 01-Working-With-Repo/02-Cloning-Repo.md
+      - "3. Making Changes": 01-Working-With-Repo/03-Making-Changes.md
+  - Pull Requests:
+      - "Overview": 02-Working-With-PR/README.md
+      - "Overview": 02-Working-With-PR/01-Opening-Pull-Requests.md
+      - "1a. Creating a PR (WEB)": 02-Working-With-PR/02a-Opening-PR-GitHub-Web.md
+      - "1b. Creating a PR (MCP)": 02-Working-With-PR/02b-Opening-PR-GitHub-CLI.md
+      - "1c. Creating a PR (gh)": 02-Working-With-PR/02c-Opening-PR-GitHub-MCP.md
+      - "3. Working with PR Reviews": 02-Working-With-PR/03-Working-With-PR-Reviews.md

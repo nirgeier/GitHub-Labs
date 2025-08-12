@@ -1,0 +1,24 @@
+###
+### mkdocs-nav.yml
+###
+
+nav:
+  - Home: README.md
+  - Setup:
+      - 00-Setup/README.md
+      - "Install Tools": 00-Setup/01-Install-Tools.md
+      - "Setup GitHub": 00-Setup/02-Setup-GitHub.md
+  - Repositories:
+      - 01-Working-With-Repo/README.md
+      - "1a. Creating a Repository (WEB)": 01-Working-With-Repo/01a-Creating-Repo-Web.md
+      - "1b. Creating a Repository (MCP)": 01-Working-With-Repo/01b-Creating-Repo-MCP.md
+      - "1c. Creating a Repository (gh)": 01-Working-With-Repo/01c-Creating-Repo-gh.md
+      - "2. Cloning a Repository": 01-Working-With-Repo/02-Cloning-Repo.md
+      - "3. Making Changes": 01-Working-With-Repo/03-Making-Changes.md
+  - Pull Requests:
+      - "Overview": 02-Working-With-PR/README.md
+      - "Overview": 02-Working-With-PR/01-Opening-Pull-Requests.md
+      - "1a. Creating a PR (WEB)": 02-Working-With-PR/02a-Opening-PR-GitHub-Web.md
+      - "1b. Creating a PR (MCP)": 02-Working-With-PR/02b-Opening-PR-GitHub-CLI.md
+      - "1c. Creating a PR (gh)": 02-Working-With-PR/02c-Opening-PR-GitHub-MCP.md
+      - "3. Working with PR Reviews": 02-Working-With-PR/03-Working-With-PR-Reviews.md

@@ -1,0 +1,31 @@
+{
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "files.exclude": {
+        "**/.venv": false
+    },
+    "explorer.excludeGitIgnore": false,
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/schema/mkdocs.yml.schema.json": [
+            "mkdocs.yml",
+            "file:///Users/nirg/repositories/GitHub-Labs/mkdocs.yml"
+        ]
+    },
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/vendor/**",
+        "**/.sass-cache/**",
+        "**/.vscode/**",
+        "**/.history/**",
+        "**/.venv/**"
+    ],
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "~/",
+            "generateMap": false
+        }
+    ]
+}
