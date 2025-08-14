@@ -36,20 +36,22 @@ theme:
     #- header.autohide  # Disabled to keep top nav always visible
     - toc.integrate
   palette:
+    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: indigo # You can choose any color here
       toggle:
-        icon: material/weather-night
+        icon: material/brightness-7
         name: Switch to dark mode
+
+    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
-      accent: indigo
+      primary: indigo # You can choose any color here
       toggle:
-        icon: material/weather-sunny
-        name: Switch to system preference
+        icon: material/brightness-4
+        name: Switch to light mode
+
   font:
     text: Mulish
     code: JetBrains Mono

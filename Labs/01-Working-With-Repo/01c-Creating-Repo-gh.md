@@ -13,6 +13,8 @@
 
 ---
 
+!!! example "Task: Create a new GitHub repository"
+
 ### 1. Authenticating with (`gh`)
 
 * **Open your terminal** and authenticate if you haven’t already.
@@ -37,7 +39,7 @@
       ```
   
 
-### 2. **Create a new repository**:
+### 2. Create a new repository:
 
    * Create a new repository using the following command:
 
@@ -73,7 +75,7 @@
 
 ---
 
-## Additional Resources
+### Additional Resources
 
 * [GitHub CLI Docs: `gh repo create`](https://cli.github.com/manual/gh_repo_create){target="_blank"}
 

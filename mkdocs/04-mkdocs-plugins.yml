@@ -3,26 +3,30 @@
 ###
 
 plugins:
-    - awesome-pages
-    - section-index
-    - meta
-    - git-authors
+  - awesome-pages
+  - section-index
+  - meta
+  # - pdf-export:
+  #     combined: true # all pages in one PDF
+  #     combined_output_path: docs/Full-Documentation.pdf
+  #     media_type: print
+  #     verbose: true
+  # Git
+  - git-authors
+  - git-committers:
+      branch: gh-pages
+      repository: nirgeier/GitHub-Labs
+  - git-revision-date-localized:
+      enable_creation_date: true
+      enable_git_follow: false
+      fallback_to_build_date: true
+      locale: en
+      timezone: UTC
+      type: date
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
 
-    # - pdf-export:
-    #     combined: true # all pages in one PDF
-    #     combined_output_path: docs/Full-Documentation.pdf
-
-    # - git-committers:
-    #     repository: nirgeier/GitHub-Labs
-    #     branch: gh-pages
-    - git-revision-date-localized:
-          enable_creation_date: true
-          enable_git_follow: false
-          fallback_to_build_date: true
-          locale: en
-          timezone: UTC
-          type: date
-    - search:
-          separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-    - minify:
-          minify_html: true
+  # Leave this one as the last one in the list
+  - print-site

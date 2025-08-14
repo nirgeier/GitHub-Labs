@@ -8,7 +8,7 @@ repo_name: nirgeier/GitHub-Labs
 site_description: A collection of GitHub Labs for learning and practicing GitHub skills.
 site_author: Nir Geier
 docs_dir: Labs
-site_dir: /tmp/mkdocs-site
+site_dir: ./mkdocs-site
 edit_uri: ""
 ###
 ### mkdocs-theme.yml
@@ -48,20 +48,22 @@ theme:
     #- header.autohide  # Disabled to keep top nav always visible
     - toc.integrate
   palette:
+    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: indigo # You can choose any color here
       toggle:
-        icon: material/weather-night
+        icon: material/brightness-7
         name: Switch to dark mode
+
+    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
-      accent: indigo
+      primary: indigo # You can choose any color here
       toggle:
-        icon: material/weather-sunny
-        name: Switch to system preference
+        icon: material/brightness-4
+        name: Switch to light mode
+
   font:
     text: Mulish
     code: JetBrains Mono
@@ -99,72 +101,76 @@ extra_javascript:
 ###
 
 plugins:
-    - awesome-pages
-    - section-index
-    - meta
-    - git-authors
+  - awesome-pages
+  - section-index
+  - meta
+  # - pdf-export:
+  #     combined: true # all pages in one PDF
+  #     combined_output_path: docs/Full-Documentation.pdf
+  #     media_type: print
+  #     verbose: true
+  # Git
+  - git-authors
+  - git-committers:
+      branch: gh-pages
+      repository: nirgeier/GitHub-Labs
+  - git-revision-date-localized:
+      enable_creation_date: true
+      enable_git_follow: false
+      fallback_to_build_date: true
+      locale: en
+      timezone: UTC
+      type: date
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
 
-    # - pdf-export:
-    #     combined: true # all pages in one PDF
-    #     combined_output_path: docs/Full-Documentation.pdf
-
-    # - git-committers:
-    #     repository: nirgeier/GitHub-Labs
-    #     branch: gh-pages
-    - git-revision-date-localized:
-          enable_creation_date: true
-          enable_git_follow: false
-          fallback_to_build_date: true
-          locale: en
-          timezone: UTC
-          type: date
-    - search:
-          separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-    - minify:
-          minify_html: true
+  # Leave this one as the last one in the list
+  - print-site
 ###
 ### mkdocs-extensions.yml
 ###
 
 markdown_extensions:
-  - toc:
-      permalink: false
-      baselevel: 1
-      toc_depth: 5
-  - abbr
-  - tables
-  - admonition # For callouts/notes
-  - footnotes # Footnotes support
-  - attr_list # Attribute lists for elements
-  - def_list # Definition lists
-  - md_in_html # Markdown inside HTML blocks
-  - smarty # Smart punctuation
-  - meta
-  - codehilite:
-      guess_lang: true # Fallback code highlighting
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.details # Collapsible details
-  - pymdownx.inlinehilite # Inline code highlighting
-  - pymdownx.keys # Keyboard key formatting
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.tilde # Subscript/superscript
-  - pymdownx.snippets # Snippet includes
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: "!!python/name:pymdownx.superfences.fence_code_format"
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - toc:
+          permalink: false
+          baselevel: 1
+          toc_depth: 2
+    - abbr
+    - tables
+    - admonition # For callouts/notes
+    - footnotes # Footnotes support
+    - attr_list # Attribute lists for elements
+    - def_list # Definition lists
+    - md_in_html # Markdown inside HTML blocks
+    - smarty # Smart punctuation
+    - meta
+    - codehilite:
+          guess_lang: true # Fallback code highlighting
+    - pymdownx.tabbed:
+          alternate_style: true
+    - pymdownx.details # Collapsible details
+    - pymdownx.inlinehilite # Inline code highlighting
+    - pymdownx.keys # Keyboard key formatting
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - pymdownx.betterem:
+          smart_enable: all
+    - pymdownx.tilde # Subscript/superscript
+    - pymdownx.snippets # Snippet includes
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.superfences:
+          custom_fences:
+              - name: mermaid
+                class: mermaid
+                format: "!!python/name:pymdownx.superfences.fence_code_format"
+    - pymdownx.emoji:
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
+          emoji_generator: !!python/name:material.extensions.emoji.to_svg
 ###
 ### mkdocs-nav.yml
 ###
@@ -172,20 +178,39 @@ markdown_extensions:
 nav:
   - Home: README.md
   - Setup:
-      - 00-Setup/README.md
-      - "Install Tools": 00-Setup/01-Install-Tools.md
-      - "Setup GitHub": 00-Setup/02-Setup-GitHub.md
+      - Setup (Overview): 00-Setup/README.md
+      - 1. Install Tools: 00-Setup/01-Install-Tools.md
+      - 2. Setup GitHub: 00-Setup/02-Setup-GitHub.md
   - Repositories:
-      - 01-Working-With-Repo/README.md
-      - "1a. Creating a Repository (WEB)": 01-Working-With-Repo/01a-Creating-Repo-Web.md
-      - "1b. Creating a Repository (MCP)": 01-Working-With-Repo/01b-Creating-Repo-MCP.md
-      - "1c. Creating a Repository (gh)": 01-Working-With-Repo/01c-Creating-Repo-gh.md
-      - "2. Cloning a Repository": 01-Working-With-Repo/02-Cloning-Repo.md
-      - "3. Making Changes": 01-Working-With-Repo/03-Making-Changes.md
+      - Working-With-Repo (Overview): 01-Working-With-Repo/README.md
+      - 1a. Creating a Repository (Web): 01-Working-With-Repo/01a-Creating-Repo-Web.md
+      - 1b. Creating a Repository (MCP): 01-Working-With-Repo/01b-Creating-Repo-MCP.md
+      - 1c. Creating a Repository (gh): 01-Working-With-Repo/01c-Creating-Repo-gh.md
+      - 2. Creating Branches: 01-Working-With-Repo/02-Creating-Branches.md
+      - 3. Cloning a Repository: 01-Working-With-Repo/03-Cloning-Repo.md
+      - 4. Making Changes: 01-Working-With-Repo/04-Making-Changes.md
   - Pull Requests:
-      - "Overview": 02-Working-With-PR/README.md
-      - "Overview": 02-Working-With-PR/01-Opening-Pull-Requests.md
-      - "1a. Creating a PR (WEB)": 02-Working-With-PR/02a-Opening-PR-GitHub-Web.md
-      - "1b. Creating a PR (MCP)": 02-Working-With-PR/02b-Opening-PR-GitHub-CLI.md
-      - "1c. Creating a PR (gh)": 02-Working-With-PR/02c-Opening-PR-GitHub-MCP.md
-      - "3. Working with PR Reviews": 02-Working-With-PR/03-Working-With-PR-Reviews.md
+      - Pull Requests (Overview): 02-Working-With-PR/README.md
+      - 1a. Creating a PR (Web): 02-Working-With-PR/01a-Creating-PR-Web.md
+      - 1b. Creating a PR (MCP): 02-Working-With-PR/01b-Creating-PR-MCP.md
+      - 2. PR - Track Changes: 02-Working-With-PR/02-PR-Track-Changes.md
+      - 3. PR - Commit Changes: 02-Working-With-PR/03-PR-Commit-Changes.md
+      - 4. PR - Code Review: 02-Working-With-PR/04-PR-Code-Review.md
+      - 5. PR - Track Review: 02-Working-With-PR/05-PR-Track-Review.md
+      - 6. PR - Template: 02-Working-With-PR/06-PR-Template.md
+      - 7. PR - CODEOWNERS: 02-Working-With-PR/07-PR-CODEOWNERS.md
+  - Configuration:
+      - Configuration (Overview): 03-Configuration/README.md
+      - 1. Template Repository: 03-Configuration/01-Template-Repository.md
+      - 2. Ruleset: 03-Configuration/02-RulesSet.md
+      - 3. CodeScan: 03-Configuration/03-CodeScan.md
+  - Collaboration:
+      - Collaboration (Overview): 04-Collaboration/README.md
+      - 1. Issues Management: 04-Collaboration/01-Issues.md
+      - 2. Wiki Documentation: 04-Collaboration/02-Wiki.md
+      - 3. Discussions & Community: 04-Collaboration/03-Discussions.md
+      - 4. Projects & Workflows: 04-Collaboration/04-Projects.md
+      - 5. Teams & Permissions: 04-Collaboration/05-Teams.md
+      - 6. Notifications: 04-Collaboration/06-Notifications.md
+      - 7. Advanced Features: 04-Collaboration/07-Advanced.md
+      - 8. GitHub Pages: 04-Collaboration/08-GitHub-Pages.md

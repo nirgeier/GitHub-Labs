@@ -14,6 +14,10 @@
 
 ---
 
+!!! explore "Task: Create and push changes to GitHub"
+
+---
+
 ## Step 1: Open the Repository
 
 * Open your terminal and navigate to the repository folder:
@@ -26,12 +30,18 @@
 
 ## Step 2: Edit Files
 
-1. Create a new branch for your changes:
+1. Create a new branch for your changes, or use an existing one from previous steps:
    ```sh
+   # Create a new branch
    git checkout -b <new-branch-name>
+
+   # Use existing branch
+   git checkout <existing-branch-name>
    ```
 2. Use your editor to add, modify, or delete files as needed.
 3. Save your changes.
+
+---
 
 ## Step 3: Stage Changes
 
@@ -46,12 +56,11 @@
 ## Step 4: Check Status
 
 * Track changes made on your branch:
-
-1. In the terminal, run:
+* In the terminal, run:
    ```sh
    git status
    ```
-2. In your IDE, check the Git panel to see the changes.
+. In your IDE, check the Git panel to see the changes.
 
 ---
 

@@ -1,9 +1,9 @@
-# Setup GitHub
+# Setup GitHub 
 
-!!! note "About this Guide"
+!!! abstract "About this Guide"
     This guide will walk you through setting up your GitHub account and configuring it for the first time.
 
-### 1. Create GitHub Account
+## 1. Create GitHub Account
 
 1. Go to [https://github.com/](https://github.com/){target="_blank"}.
 2. Click **Sign up** in the top-right corner.
@@ -14,18 +14,24 @@
 7. Choose your plan (the free plan is sufficient for most users).
 8. Complete the setup by answering a few questions (optional) and click **Complete setup**.
 
-### 2. Verify Your Email Address
+---
+
+## 2. Verify Your Email Address
 
 1. Check your email inbox for a message from GitHub.
 2. Click the verification link in the email to activate your account.
 
-### 3. Set Up Your Profile
+---
+
+## 3. Set Up Your Profile
 
 1. Click your profile icon in the top-right and select **Your profile**.
 2. Click **Edit profile** to add your name, bio, location, and profile picture.
 3. Save your changes.
 
-### 4. Generate SSH Key 
+---
+
+## 4. Generate SSH Key 
 
 - When working with Git and GitHub, it's a good idea to set up SSH keys for secure authentication.
 - SSH keys are a pair of cryptographic keys that can be used to authenticate to GitHub without needing to enter your username and password every time.
@@ -43,7 +49,6 @@
     | ------------------------- | ----------------------------------- |
     | :lock: `~/.ssh/id_rsa`    | Your private key (keep this secret) |
     | :key: `~/.ssh/id_rsa.pub` | Your public key (can be shared)     |
-
 
     ```sh {8}
     # Example output
@@ -72,7 +77,9 @@
 
    * Press Enter to accept the default file location and do not set a passphrase or you will be prompted to enter it each time you use the key.
    
-### 5. Add your SSH to ssh-agent
+---
+
+## 5. Add your SSH to ssh-agent
 
 * If you are using Windows, make sure you have [Git Bash](https://gitforwindows.org/) installed.
 * If you are using Linux, make sure you have the `ssh-agent` package installed.
@@ -83,7 +90,9 @@
     ssh-add ~/.ssh/id_rsa
     ```
 
-### 6. Add your SSH to GitHub
+---
+
+## 6. Add your SSH to GitHub
 
 1. Copy your public key to your clipboard:
   ```sh
@@ -93,14 +102,16 @@
 2. Go to GitHub site > **Settings** > **SSH and GPG keys** > **New SSH key**.
 3. Paste your key, give it a title, and save.
 
-!!! warn "Adding ssh key using gh"
+!!! abstract "Adding ssh key using gh"
     
     * You can also use gh using: `gh repo deploy-key`
     * docs:   
     :orange_book:&emsp;[https://cli.github.com/manual/gh_ssh-key_add](https://cli.github.com/manual/gh_ssh-key_add){target="_blank"}   
     :orange_book:&emsp;[https://cli.github.com/manual/gh_repo_deploy-key](https://cli.github.com/manual/gh_repo_deploy-key){target="_blank"}
 
-### 7. Test Your Setup
+---
+
+## 7. Test Your Setup
 
 * Run the following command to test your SSH connection:
 

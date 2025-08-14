@@ -21,33 +21,38 @@ body {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-.logo1 {
-  width: 182px;
-  height: 50px;
-  margin: 20px auto;
-  display: block;
-  position: fixed;
-  right: 10px;
-  bottom: 0px;
-  background-image: url("https://raw.githubusercontent.com/nirgeier/labs-assets/main/assets/images/codeWizard.png");
-  background-size: cover;
-  background-position: center;
-}
-
+.logo1,
 .logo2 {
-  width: 100px;
-  height: 75px;
-  margin: auto 20px;
-  display: block;
-  position: fixed;
-  right: 30px;
-  bottom: 100px;
-  background-image: url("https://raw.githubusercontent.com/nirgeier/labs-assets/main/assets/images/git-github.png");
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
+  display: none;
 }
 
+@media screen and (min-width: 800px) {
+  .logo1 {
+    width: 182px;
+    height: 50px;
+    margin: 20px auto;
+    display: block;
+    position: fixed;
+    right: 10px;
+    bottom: 0px;
+    background-image: url("https://raw.githubusercontent.com/nirgeier/labs-assets/main/assets/images/codeWizard.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .logo2 {
+    width: 100px;
+    height: 75px;
+    margin: auto 20px;
+    display: block;
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    background-image: url("https://raw.githubusercontent.com/nirgeier/labs-assets/main/assets/images/git-github.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+  }
+}
 /* Remove focus-within styles globally */
 *:focus-within {
   outline: none !important;
@@ -65,10 +70,6 @@ body {
   border: 1px solid #0074d9; /* Change color and style as needed */
   border-radius: 8px; /* Optional: rounded corners */
   box-shadow: none; /* Optional: remove shadow */
-}
-
-.md-theme-light body {
-  color: red;
 }
 
 .md-theme-light .md-typeset img,
@@ -142,17 +143,122 @@ body {
   background: transparent;
   box-shadow: none;
 }
+[data-md-color-media="(prefers-color-scheme: dark)"] .headline {
+  color: var(--color-headers);
+}
+[data-md-color-media="(prefers-color-scheme: dark)"] .white-text {
+  color: #f7d078 !important;
+}
+[data-md-color-media="(prefers-color-scheme: dark)"] .md-typeset table {
+  line-height: 1.25em !important;
+}
 
-/* Hide everything except the main content area */
 @media print {
-  header,
-  nav,
-  .md-header,
-  .md-sidebar,
+  /*
+   * --------------------------------------------------
+   * Core Print Styles
+   * --------------------------------------------------
+   */
+  /* Resetting theme colors for print to ensure black text on a white background */
+  /* Define the page properties, such as size and margins */
+  @page {
+    size: A4 portrait;
+    margin: 2.5cm;
+    @top-center {
+      /* Define a custom string for the document title */
+      content: "GitHub Workshop Aug 2025 [Atera by Nir Geier]"; /* Simple string for the header */
+      font-size: 12px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #777;
+    }
+    @bottom-center {
+      /* Display "Page X of Y" in the footer */
+      content: "@CodeWizard / CommitAI - Page " counter(page) " of " counter(pages);
+      font-size: 12px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #777;
+    }
+  }
+  /* Remove all empty pages */
+  @page :blank {
+    display: none;
+  }
+  /*
+   * --------------------------------------------------
+   * Enhancing Legibility
+   * --------------------------------------------------
+   */
+  /* Set a readable font size and line height for the body text */
+  body {
+    font-size: 12pt;
+    line-height: 1em;
+    color: #000 !important;
+  }
+  /* Remove the display of URLs in parentheses after links */
+  a:after {
+    content: none;
+  }
+  /* Disable the color on links to keep them black for printing */
+  a {
+    color: #000 !important;
+  }
+  /* Ensure the main content takes up the full width of the page */
+  .md-main__inner {
+    max-width: none;
+  }
+  /* Make sure all content is visible and takes up the full width of the page. */
+  .md-main {
+    margin: 0;
+    padding: 0;
+  }
+  /*
+   * --------------------------------------------------
+   * Managing Page Breaks
+   * --------------------------------------------------
+   */
+  /* Prevent page breaks inside of code blocks, tables, and images to keep them together */
+  .highlight,
+  pre,
+  table,
+  img {
+    -moz-column-break-inside: avoid;
+         break-inside: avoid;
+  }
+  /* Remove page breaks before and after headers and sections */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  section {
+    -moz-column-break-before: auto;
+         break-before: auto;
+    -moz-column-break-after: auto;
+         break-after: auto;
+  }
+  emsp {
+    padding: 0 5px 0 0;
+  }
+  /*
+   * --------------------------------------------------
+   * Hiding Non-Essential Elements
+   * --------------------------------------------------
+   */
+  /* Hide the header, footer, navigation bars, and any interactive elements */
   .md-footer,
+  .md-header,
+  .md-nav,
+  .md-search__form,
+  .md-sidebar,
   .md-tabs,
-  .md-top {
+  .md-top,
+  header,
+  nav {
     display: none !important;
+  }
+  .md-source-file nav {
+    display: block !important;
   }
   /* Ensure main content takes full width in PDF */
   .md-content {
