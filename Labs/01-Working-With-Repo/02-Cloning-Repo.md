@@ -37,7 +37,6 @@
 1. Open your terminal or command prompt.
 2. Run the following command, replacing `<URL>` with the copied repository URL:
 3. A new folder with the repository's name will be created in your current directory.
-
    ```sh
    git clone <URL> [<local-directory>]
    ```

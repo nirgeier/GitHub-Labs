@@ -1,6 +1,6 @@
 # Setup GitHub
 
-!!! note "About this Guide"
+!!! abstract "About this Guide"
     This guide will walk you through setting up your GitHub account and configuring it for the first time.
 
 ### 1. Create GitHub Account
@@ -93,7 +93,7 @@
 2. Go to GitHub site > **Settings** > **SSH and GPG keys** > **New SSH key**.
 3. Paste your key, give it a title, and save.
 
-!!! warn "Adding ssh key using gh"
+!!! abstract "Adding ssh key using gh"
     
     * You can also use gh using: `gh repo deploy-key`
     * docs:   

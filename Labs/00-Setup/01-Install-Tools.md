@@ -1,14 +1,14 @@
 
 # Installing Tools 
 
-!!! note "About this Guide"
+!!! abstract "About this Guide"
     This guide will walk you through installing git, creating a GitHub account and configuring it for the first time.
 
 ## 1. Installing Git 
 
 - First, you need to install Git locally.
 
-!!! note "Installing Git"
+!!! tip "Installing Git"
 
     === ":fontawesome-brands-git-alt: macOS"
         Open Terminal and run:
@@ -31,7 +31,7 @@
 - To work with GitHub from your computer, you can use the **optional** GitHub CLI (`gh`) tool to interact with GitHub directly from your terminal.
 - **Click** on the section below to expand it
 
-!!! note "Installing GitHub CLI"
+!!! tip "Installing GitHub CLI"
 
     === ":octicons-tools-24: macOS"
         Open Terminal and run:
@@ -66,5 +66,25 @@
     git config --global user.name "Nir Geier"
     git config --global user.email "nir.geier@gmail.com"
     ```
+
+
+## 4. Tools Used
+
+- **GitHub Web**: Web browser and GitHub account
+- **GitHub CLI**: GitHub CLI installed (`gh` command)
+- **GitHub MCP**: VS Code with GitHub Copilot MCP extension
+
+---
+
+## Feature Comparison
+
+| Feature                | GitHub Web        | GitHub CLI        | GitHub MCP  |
+| ---------------------- | ----------------- | ----------------- | ----------- |
+| **Ease of Use**        | Beginner-friendly | Developer-focused | AI-assisted |
+| **Speed**              | Medium            | Fast              | Very Fast   |
+| **Automation**         | Limited           | High              | Very High   |
+| **Customization**      | Good              | Excellent         | Good        |
+| **Offline Capability** | No                | Yes               | No          |
+| **Bulk Operations**    | No                | Yes               | Limited     |
 
 

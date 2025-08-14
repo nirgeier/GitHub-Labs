@@ -27,5 +27,6 @@
             "savePath": "~/",
             "generateMap": false
         }
-    ]
+    ],
+    "CodeGPT.apiKey": "Ollama"
 }

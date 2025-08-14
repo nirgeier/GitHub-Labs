@@ -37,7 +37,7 @@
       ```
   
 
-### 2. **Create a new repository**:
+### 2. Create a new repository:
 
    * Create a new repository using the following command:
 

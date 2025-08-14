@@ -142,6 +142,15 @@ body {
   background: transparent;
   box-shadow: none;
 }
+[data-md-color-media="(prefers-color-scheme: dark)"] .headline {
+  color: var(--color-headers);
+}
+[data-md-color-media="(prefers-color-scheme: dark)"] .white-text {
+  color: #f7d078 !important;
+}
+[data-md-color-media="(prefers-color-scheme: dark)"] .md-typeset table {
+  line-height: 1.25em !important;
+}
 
 /* Hide everything except the main content area */
 @media print {
