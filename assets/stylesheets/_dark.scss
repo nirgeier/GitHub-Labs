@@ -38,7 +38,7 @@
     color: #f7d078 !important;
   }
 
-  .md-typeset table:not([class]) td {
-    line-height: 1.25em;
+  .md-typeset table {
+    line-height: 1.25em !important;
   }
 }
