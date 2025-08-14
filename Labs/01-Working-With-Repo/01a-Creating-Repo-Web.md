@@ -1,8 +1,8 @@
 
-# Creating a GitHub Repository Using Web
+# Creating a GitHub Repository Using `GitHub Web`
 
-- This guide will walk you through the process of creating a new repository on GitHub using the web interface. 
-- Follow the steps below to set up your project repository quickly and efficiently.
+⚙️&emsp;This guide will walk you through the process of creating a new repository on GitHub using the web interface.   
+⚙️&emsp; Follow the steps below to set up your project repository quickly and efficiently.
 
 ---
 
@@ -12,6 +12,8 @@
 - A web browser (e.g., Chrome, Firefox, Safari)
   
 ---
+
+!!! example "Task: Create a new GitHub repository"
 
 ### 1. Creating a New Repository
 
@@ -35,6 +37,8 @@
 
 1. Review your settings.
 2. Click the **Create repository** button at the bottom of the page.
+
+![Create Repository](../assets/images/create-repo.png){width="800px"}
 
 ---
 
