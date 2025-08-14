@@ -20,8 +20,21 @@
     }
 
     /* When URL contains 'api' */
-    body[data-path*="002"] .md-content {
+    body[data-path*="02"] .md-content {
         background-color: #f8f9fa;
         border-left: 4px solid #28a745;
+    }
+
+    .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .headline {
+        color: var(--color-headers);
+    }
+
+    .white-text {
+        color: #f7d078 !important;
     }
 }

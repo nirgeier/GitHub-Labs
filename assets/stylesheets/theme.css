@@ -134,7 +134,47 @@ body {
 [data-md-color-media="(prefers-color-scheme: dark)"] .md-typeset h5 {
   color: var(--color-headers);
 }
-[data-md-color-media="(prefers-color-scheme: dark)"] body[data-path*="002"] .md-content {
+[data-md-color-media="(prefers-color-scheme: dark)"] body[data-path*="02"] .md-content {
   background-color: #f8f9fa;
   border-left: 4px solid #28a745;
+}
+[data-md-color-media="(prefers-color-scheme: dark)"] .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
+  background: transparent;
+  box-shadow: none;
+}
+[data-md-color-media="(prefers-color-scheme: dark)"] .headline {
+  color: var(--color-headers);
+}
+[data-md-color-media="(prefers-color-scheme: dark)"] .white-text {
+  color: #f7d078 !important;
+}
+
+/* Hide everything except the main content area */
+@media print {
+  header,
+  nav,
+  .md-header,
+  .md-sidebar,
+  .md-footer,
+  .md-tabs,
+  .md-top {
+    display: none !important;
+  }
+  /* Ensure main content takes full width in PDF */
+  .md-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-shadow: none !important;
+    font-size: 12px !important;
+  }
+  /* Optional: make links look like plain text */
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  .md-main__inner {
+    display: block;
+  }
 }

@@ -1,0 +1,32 @@
+/* Hide everything except the main content area */
+@media print {
+    header,
+    nav,
+    .md-header,
+    .md-sidebar,
+    .md-footer,
+    .md-tabs,
+    .md-top {
+        display: none !important;
+    }
+
+    /* Ensure main content takes full width in PDF */
+    .md-content {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+        font-size: 12px !important;
+    }
+
+    /* Optional: make links look like plain text */
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .md-main__inner {
+        display: block;
+    }
+}
