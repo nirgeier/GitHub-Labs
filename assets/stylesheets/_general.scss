@@ -1,119 +1,98 @@
+@use "mixins" as *;
+
 :root {
-    --color-red: #993232;
-    --color-headers: #00ccc0;
-    --color-dark-bg: #333;
-    --color-text: #3a3a3a;
-    --color-dark-text: #303030;
-    --color-background: #fafafa;
-    --color-table-header-background: #ededed;
-    --color-code-background: #fff;
-    --color-code-border-color: #dfdfdf;
-    --color-invert-filter: none;
+  --color-red: #993232;
+  --color-headers: #00ccc0;
+  --color-dark-bg: #333;
+  --color-text: #3a3a3a;
+  --color-dark-text: #303030;
+  --color-background: #fafafa;
+  --color-table-header-background: #ededed;
+  --color-code-background: #fff;
+  --color-code-border-color: #dfdfdf;
+  --color-invert-filter: none;
 }
 
 body {
-    font-family: "Mulish", sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
 [data-md-type="navigation"] {
-    font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-.logo1 {
-    width: 182px;
-    height: 50px;
-    margin: 20px auto;
-    display: block;
-    position: fixed;
-    right: 10px;
-    bottom: 0px;
-    //background-image: url("https://raw.githubusercontent.com/nirgeier/labs-assets/main/assets/images/Wizard.jpeg");
-    background-image: url("https://raw.githubusercontent.com/nirgeier/labs-assets/main/assets/images/codeWizard.png");
-    background-size: cover;
-    background-position: center;
-    // border-radius: 10px;
-    // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    // z-index: 1000;
-}
-
+.logo1,
 .logo2 {
-    width: 100px;
-    height: 75px;
-    margin: auto 20px;
-    display: block;
-    position: fixed;
-    right: 30px;
-    bottom: 100px;
-    background-image: url("https://raw.githubusercontent.com/nirgeier/labs-assets/main/assets/images/git-github.png");
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px;
-    // border-radius: 10px;
-    // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    // z-index: 1000;
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .logo1 {
+    @include logo1;
+  }
+  .logo2 {
+    @include logo2;
+  }
 }
 
 /* Remove focus-within styles globally */
 *:focus-within {
-    outline: none !important;
-    box-shadow: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .md-typeset ol li,
 .md-typeset ul li {
-    margin: 0;
+  margin: 0;
 }
 
 /* Change border color, width, and style for all notes */
 .md-typeset .admonition.note,
 .md-typeset details.note {
-    border: 1px solid #0074d9; /* Change color and style as needed */
-    border-radius: 8px; /* Optional: rounded corners */
-    box-shadow: none; /* Optional: remove shadow */
+  border: 1px solid #0074d9; /* Change color and style as needed */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: none; /* Optional: remove shadow */
 }
 
-.md-theme-light body {
-    color: red;
-}
 .md-theme-light .md-typeset img,
 .md-theme-light .md-typeset svg,
 .md-theme-light .md-typeset video {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .md-typeset h1 {
-    font-size: 2em;
-    line-height: 1.5;
-    margin: 0px 0px 0em;
+  font-size: 2em;
+  line-height: 1.5;
+  margin: 0px 0px 0em;
 }
 
 .md-typeset h2 {
-    font-size: 1.5em;
-    line-height: 1.5;
-    margin: 0px 0px 0em;
+  font-size: 1.5em;
+  line-height: 1.5;
+  margin: 0px 0px 0em;
 }
 
 .md-nav,
 .md-typeset {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .md-typeset table {
-    line-height: 0.25rem;
+  line-height: 0.25rem;
 }
 
 /* Force sidebar to be visible alongside tabs */
 .md-sidebar {
-    display: block !important;
+  display: block !important;
 }
 
 /* Make sure content area doesn't overlap */
 .md-main__inner {
-    display: grid;
-    grid-template-columns: minmax(250px, 300px) 1fr;
+  display: grid;
+  grid-template-columns: minmax(250px, 300px) 1fr;
 }
 
 /* Hide sidebar items that are not in the active tab */
 .md-nav__list > .md-nav__item--nested:not(.md-nav__item--active) {
-    display: none;
+  display: none;
 }
