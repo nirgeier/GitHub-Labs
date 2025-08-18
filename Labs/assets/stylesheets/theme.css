@@ -47,7 +47,6 @@ body {
     position: fixed;
     left: 30px;
     bottom: 25px;
-    background-image: url("https://cdn.prod.website-files.com/5db91960366cf11013c101c5/5dd1f30aee424648c221b79f_COMMIT%20Logo.png");
     background-size: cover;
     background-position: center;
     border-radius: 15px;
@@ -115,8 +114,16 @@ body {
   display: none;
 }
 
+.md-typeset a {
+  color: whitesmoke;
+}
+
+.md-header {
+  background-color: black;
+}
+
 [data-md-color-media="(prefers-color-scheme: dark)"] {
-  background-color: #000e14;
+  background-color: black;
   color: #f2f2f2;
   /* When URL contains 'api' */
 }

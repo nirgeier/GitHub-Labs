@@ -199,6 +199,7 @@ nav:
       - 5. PR - Track Review: 02-Working-With-PR/05-PR-Track-Review.md
       - 6. PR - Template: 02-Working-With-PR/06-PR-Template.md
       - 7. PR - CODEOWNERS: 02-Working-With-PR/07-PR-CODEOWNERS.md
+      - 99. Advanced Pull Request (PR) Lab: 02-Working-With-PR/99-Advanced-PR-Lab.md
   - Configuration:
       - Configuration (Overview): 03-Configuration/README.md
       - 1. Template Repository: 03-Configuration/01-Template-Repository.md
