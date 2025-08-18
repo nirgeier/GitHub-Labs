@@ -40,14 +40,14 @@ body {
     background-position: center;
   }
   .logo2 {
-    width: 100px;
-    height: 75px;
+    width: 200px;
+    height: 50px;
     margin: auto 20px;
     display: block;
     position: fixed;
     left: 30px;
-    bottom: 100px;
-    background-image: url("/assets/images/commit.png");
+    bottom: 25px;
+    background-image: url("https://cdn.prod.website-files.com/5db91960366cf11013c101c5/5dd1f30aee424648c221b79f_COMMIT%20Logo.png");
     background-size: cover;
     background-position: center;
     border-radius: 15px;
